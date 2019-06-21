@@ -24,10 +24,16 @@ Clone the repository
 git clone https://github.com/andremanzanosp/vagrant-cd.git
 ```
 
-Build and start all docker containers
+Start vagrant
 ```
 vagrant up
 ```
+
+* It may ask for Admin password, for mounting NFS shared folder
+* It can take a while, since it is going to download a bunch of things
+* It should build and start docker containers
+
+
 
 ---
 
@@ -35,15 +41,16 @@ vagrant up
 
 Since we have difined vagrant to start with ip 192.168.33.10, we are going to use it.
 
-HTTP [http://192.168.33.10/](http://192.168.33.10/) 
-HTTPS [https://192.168.33.10/](https://192.168.33.10/)
+- [http://192.168.33.10/](http://192.168.33.10/) 
+
+- [https://192.168.33.10/](https://192.168.33.10/)
 
 
 ---
 
 ## TODO
 
-- Use names
-- Create tests
+- Use names instead ips
+- Create tests for Go app
 
 
