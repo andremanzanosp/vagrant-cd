@@ -6,8 +6,11 @@ It has a Golang app inside 'docker-goapp' listening to port 8080.
 
 The intention here is to create a virtual machine using Vagrant, and inside this virtual machine run docker container with the Golang app.
 On your desktop, you should be able to access it from http and https.
+After you edit the source code and save it, it should build and republish the content automaticaly.
+It is not realtime, since it has to compile the app first, but shoudn't take more than a minute.
 
-Ps: This project is not intend to production environment, since it is not tunned for security.
+
+IMPORTANT: This project is not intend to production environment, since it is not tunned for security.
 
 
 ## Dependencies:
