@@ -1,0 +1,15 @@
+---
+# tasks file for /etc/ansible/roles/https-proxy
+
+- name: Create HTTPS Proxy container
+  docker_container:
+    name: proxy
+    image: outrigger/https-proxy:1.0
+    state: started
+    ports:
+    - "443:443"
+    env:
+      UPSTREAM_DOMAIN: "192.168.33.10"
+      UPSTREAM_PORT: "80"
+    tty: true
+    detach: true

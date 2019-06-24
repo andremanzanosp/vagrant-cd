@@ -1,0 +1,24 @@
+
+- name: Remove Goapp container
+  hosts: localhost
+  tasks:
+  - name: Remove Goapp container
+    docker_container:
+      name: goapp
+      state: absent
+- name: Remove Goapp image
+  hosts: localhost
+  tasks:
+  - name: Remove Build image
+    docker_image:
+      name: goapp
+      state: absent
+
+- name: Remove HTTPS Proxy container
+  hosts: localhost
+  tasks:
+  - name: Remove Proxy container
+    docker_container:
+      name: proxy
+      state: absent
+

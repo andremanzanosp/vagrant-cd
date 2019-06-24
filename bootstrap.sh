@@ -13,8 +13,8 @@ sudo usermod -aG docker vagrant
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
 
-# Install Ansible
+# Install and config Ansible
 sudo yum install -y ansible
-
-ansible-playbook /vagrant/deploy_container.yml
-
+sudo cp -R /vagrant/ansible/* /etc/ansible/
+/usr/bin/ansible-playbook /etc/ansible/create-cron.yml
+/usr/bin/ansible-playbook /etc/ansible/deploy-containers.yml

@@ -1,0 +1,9 @@
+---
+# tasks file for /etc/ansible/roles/crontab
+
+- name: Creates an entry on crontab
+  cron:
+    name: Deploy containers at reboot
+    special_time: reboot
+    job: "/usr/bin/ansible-playbook /etc/ansible/deploy-containers.yml"
+
