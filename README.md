@@ -37,7 +37,7 @@ $ vagrant up
 * It should build and start docker containers
 
 
-If you want to connect to vm created by vagrant use or use option -c to run a single command
+If you want to connect to vm created by vagrant use command bellow or use option -c to run a single command
 ```
 $ vagrant ssh
 ```
